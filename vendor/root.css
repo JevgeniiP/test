@@ -1,0 +1,38 @@
+:root {
+	--max-w: 1px;
+	--min-w: 1px;
+	--max-b: 1px;
+	--min-b: 1px;
+	--side-margin-max: 1px;
+	--side-margin-min: 1px;
+	--delta-w: calc(var(--max-w) - var(--min-w));
+	--delta-b: calc(var(--max-b) - var(--min-b));
+	--step-w: calc(var(--delta-w) / var(--delta-b));
+	--width: calc((var(--max-w) - var(--step-w)) * (var(--max-b) - 100vw));
+
+	--delta-margin: calc(var(--side-margin-max) - var(--side-margin-min));
+	--step-margin: calc(var(--delta-margin) / var(--delta-b));
+	--side-margin: calc((var(--side-margin-max) - var(--step-margin)) * (var(--max-b) - 100vw));
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+	.header {
+		--max-w: 1184px;
+		--min-w: 928px;
+		--max-b: 1280px;
+		--min-b: 1024px;
+		--side-margin-max: 24px;
+		--side-margin-min: 12px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+	.lead {
+		--max-w: 984px;
+		--min-w: 928px;
+		--max-b: 1280px;
+		--min-b: 1024px;
+		--side-margin-max: 148px;
+		--side-margin-min: 48px;
+	}
+}
